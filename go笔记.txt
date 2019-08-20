@@ -1,0 +1,62 @@
+	GO语言学习笔记
+GO目前的应用：
+	Docker
+	Codis
+	Glow类似于Hadoop
+	Cockroach（DB数据库）
+	...
+
+GOPATH 环境变量设置：
+$GOPATH=“存放下载包的路径”
+
+配置环境变量
+Windows环境下 set GOPATH=“存放下载包的路径”
+查看是否设置成功			echo=%GOPATH%
+get path（下载包）
+
+GO输出格式：
+
+例如：hello，word
+
+	package main
+	import "fmt"
+	func main(){
+		fmt.println("hello,word!")
+	}
+
+GO基础语法
+1.常用关键字：
+
+break	default	func	interface	select
+case	defer	go	map	struct	chan
+else	goto	package	switch	const	fallthrough
+if	rangge	type	continue for	import	return	var
+
+2.%d 整形 %s 字符串	%v 打印数据类型
+
+3.数据类型
+boll	rune	int8	int16	int32	int64
+byte	unit8	unit16	unit32	unit64	float32
+float64	complex64	complex128	string
+array	slice	map
+	3.1 array 连组，定义后不可改变
+		var x [10] int
+		x[0] = 1
+		x[9] = 10
+
+
+	3.2 slice 动态数组
+		var fslice = []int
+		s:= make([]int,10,20)
+	3.3 map 精准数据(集合) 
+		var student map[string]float32
+		student= make(map[string]float32)
+		student["lisi"] = 12.1
+		简短声明
+		student := make (map[s tring]float32)
+		student["lisi"] = 12.1
+	3.4 const	常量（不被修改的量），（整数
+		const a string = "abc"
+		简短声明
+		const b = "abc"
+	

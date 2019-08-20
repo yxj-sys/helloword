@@ -1,0 +1,38 @@
+#创建数据库
+create database 数据库名  character set utf8;
+#修改数据库
+alter database 数据库名 charactor set gbk;
+创建数据表
+create	table	表(
+id	bigint,
+name	varchar,
+age	int
+);
+#添加一列数据
+alter	table	表 add	字段名  数据类型;
+#修改一个表的字段类型
+ALTER TABLE 表名 MODIFY 字段名  数据类型;
+#修改表名
+RENAME TABLE 原始表名 TO  要修改的表名; 
+#修改表的列名
+ALTER TABLE 表名 CHANGE 原始列名 新列名 数据类型;
+#删除一列
+ALTER TABLE 表名 DROP 字段名;
+#删除表
+DROP TABLE 表名;
+#插入操作，数据
+INSERT INTO 表名（列名1，列名2 ...）VALUE (列值1，列值2...);
+#批量插入操作
+INSERT INTO 表名（列名1，列名2 ...）VALUES (列值1，列值2...)，(列值1，列值2...);
+#修改数据
+UPDATE 表名 SET 列名1=列值1，列名2=列值2 。。。 WHERE 列名=值
+#删除表操作
+DELETE FROM 表名 【WHERE 列名=值】
+注：不删除架构
+TRUNCATE TABLE 表名;
+注：删除所有数据，重新建一张一样字段的表
+#查询所以列
+SELECT * FROM 表名;
+#查询数据库中的某个数据;
+SELECT * FROM 表名 where 条件;
+
